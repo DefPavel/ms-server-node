@@ -1,0 +1,38 @@
+doctype html 
+html(lang="ru")
+  head
+    // Charset
+    meta(charset="utf-8")
+    // Width
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    title= title 
+    // -------- Favicon --------
+    link(type="image/x-icon" rel="icon" href="favicon.ico")
+    // -------- Icon fonts --------
+    //link(type="text/css" rel="stylesheet" href="assets/vendor/fonts/ionicons.css")
+    //link(type="text/css" rel="stylesheet" href="assets/vendor/fonts/linearicons.css")
+    // -------- Fonts --------
+    link(type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900")
+    // -------- Stylesheets --------
+    link(type="text/css" rel="stylesheet" href="/assets/vendor/css/rtl/bootstrap.css" class="theme-settings-bootstrap-css")
+    link(type="text/css" rel="stylesheet" href="/assets/vendor/css/rtl/appwork.css" class="theme-settings-appwork-css")
+    link(type="text/css" rel="stylesheet" href="/assets/vendor/css/rtl/theme-corporate.css" class="theme-settings-theme-css")
+    link(type="text/css" rel="stylesheet" href="/assets/vendor/css/rtl/colors.css" class="theme-settings-colors-css")
+    link(type="text/css" rel="stylesheet" href="/assets/vendor/css/rtl/uikit.css")
+    link(type="text/css" rel="stylesheet" href="/css/demo.css")
+    // -------- Libs --------
+    link(type="text/css" rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css")
+    // -------- Scripts --------
+    //script(src="/assets/vendor/js/layout-helpers.js")
+    // Automatic page load progress bars
+    script(src="/assets/vendor/js/pace.js")
+    // -------- Query --------
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    // -------- Page --------
+    link(type="text/css" rel="stylesheet" href="assets/vendor/css/pages/authentication.css")
+  body
+    .page-loader
+      .bg-primary
+    .content
+      block content
+    block scripts

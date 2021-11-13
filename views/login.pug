@@ -1,0 +1,30 @@
+extends ./layouts/layout-login
+
+block content
+  .authentication-wrapper.authentication-1.px-4
+    .authentication-inner.py-5
+      // LOGO
+      .d-flex.justify-content-center.align-items-center
+        h2 JMU 
+          small.text-muted hostels
+      form(action="/auth" method="post")    
+        form.my-5
+          // form-group -  Логин
+          .form-group
+            label.form-label Логин
+            input(type="text", name="username", class="form-control")
+          // form-group - Пароль
+          .form-group
+            label.form-label Пароль
+            input(type="password", name="password", class="form-control")
+
+          .d-flex.justify-content-between.align-items-center.m-0  
+            label.custom-control.custom-checkbox.m-0
+              input(type="checkbox" class="custom-control-input")
+              span.custom-control-label Запомнить
+            button.btn.btn-primary.px-3(type='submit') Ввойти
+block scripts 
+    // Scripts  
+    script(type="text/javascript" src="assets/vendor/libs/popper/popper.js")
+    script(type="text/javascript" src="assets/vendor/js/bootstrap.js")
+    script(type="text/javascript" src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js")

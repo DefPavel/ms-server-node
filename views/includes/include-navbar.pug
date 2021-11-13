@@ -1,0 +1,41 @@
+nav#layout-navbar.layout-navbar.navbar.navbar-expand-lg.align-items-lg-center.container-p-x.bg-navbar-theme
+    a(href="/" class="navbar-brand app-brand demo d-lg-none py-0 mr-4")
+        span.app-brand-text.demo.font-weight-normal.ml-2 JMU hostels
+            .layout-sidenav-toggle.navbar-nav.d-lg-none.align-items-lg-center.mr-auto
+              a(href="javascript:void(0)" class="nav-item nav-link px-0 mr-lg-4")
+                i.ion.ion-md-menu.text-large.align-middle
+            button(type="button" class="navbar-toggler" data-toggle="collapse" data-target="#layout-navbar-collapse")
+              span.navbar-toggler-icon
+            #layout-navbar-collapse.navbar-collapse.collapse 
+              hr.d-lg-none.w-100.my-2     
+              .navbar-nav.align-items-lg-center
+
+              //Search
+              label.nav-item.navbar-text.navbar-search-box.p-0.active
+                i.ion.ion-ios-search.navbar-icon.align-middle
+                span.navbar-search-input.pl-2
+                  input(type="text" class="form-control navbar-text mx-2" placeholder="Поиск")
+
+              .navbar-nav.align-items-lg-center.ml-auto
+                .demo-navbar-notifications.nav-item.dropdown.mr-lg-3
+                  a(href="#" class="nav-link dropdown-toggle hide-arrow" data-toggle="dropdown")
+                    i.ion.ion-md-notifications-outline.navbar-icon.align-middle
+
+                .demo-navbar-user.nav-item.dropdown
+                  a(href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false")
+                    span.d-inline-flex.flex-lg-row-reverse.align-items-center.align-middle
+                      span.px-1.mr-lg-2.ml-2.ml-lg-0 Vergels
+
+                  .dropdown-menu.dropdown-menu-right
+                    a(href="/profile" class="dropdown-item" )
+                      i.ion.ion-ios-person
+                      span &nbsp; Личный кабинет 
+                    a(href="#" class="dropdown-item" )
+                      i.sidenav-icon.ion.ion-md-settings
+                      span &nbsp; Настройки
+                    .dropdown-divider
+                    a(href="/logout" class="dropdown-item")
+                      i.ion.ion-ios-log-out.text-danger
+                      span &nbsp; Выход   
+                    
+                                 

@@ -1,0 +1,49 @@
+#layout-sidenav.layout-sidenav.sidenav.sidenav-vertical.bg-white 
+    .app-brand.demo
+        a(href="/home" class="app-brand-text demo sidenav-text font-weight-normal ml-2") JMU 
+            small.text-muted hostels
+    .sidenav-divider.mt-0
+    ul.sidenav-inner.py-1
+        li(class=(name_link === "/home" ? "sidenav-item active" : "sidenav-item"))
+            a(href="/home" class="sidenav-link")
+                i.sidenav-icon.ion.ion-md-desktop
+                | Главная
+
+        li(class=(name_link.includes("stat") ? "sidenav-item open" : "sidenav-item"))
+            a(href="javascript:void(0)" class="sidenav-link sidenav-toggle")
+                i.sidenav-icon.ion.ion-md-pie
+                | Статистика
+            ul.sidenav-menu
+                li.sidenav-item
+                    a(href="#" class="sidenav-link")
+                        | Статистика по студентам 
+                li.sidenav-item
+                    a(href="#" class="sidenav-link")
+                        | Статистика по сотрудникам 
+                li.sidenav-item
+                    a(href="#" class="sidenav-link")
+                        | Статистика по переселенцам 
+
+        li(class=(name_link.includes("hostel") ? "sidenav-item open" : "sidenav-item"))
+            a(href="javascript:void(0)" class="sidenav-link sidenav-toggle")
+                i.sidenav-icon.ion.ion-md-home
+                | Общежития
+            ul.sidenav-menu
+                li(class=(name_link === "/hostel/1" ? "sidenav-item active" : "sidenav-item"))
+                    a(href="/hostel/1" class="sidenav-link")
+                        | Общежитие №2
+                li(class=(name_link === "/hostel/2" ? "sidenav-item active" : "sidenav-item"))
+                    a(href="/hostel/2" class="sidenav-link")
+                        | Общежитие №3 
+                li(class=(name_link === "/hostel/3" ? "sidenav-item active" : "sidenav-item"))
+                    a(href="/hostel/3" class="sidenav-link")
+                        | Общежитие №4  
+                li(class=(name_link === "/hostel/4" ? "sidenav-item active" : "sidenav-item"))
+                    a(href="/hostel/4" class="sidenav-link")
+                        | Общежитие №5  
+                li(class=(name_link === "/hostel/5" ? "sidenav-item active" : "sidenav-item"))
+                    a(href="/hostel/5" class="sidenav-link")
+                        | Общежитие №7                                                 
+
+
+

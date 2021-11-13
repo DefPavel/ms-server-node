@@ -1,0 +1,18 @@
+version: '3'
+services:
+    #1. Главный Проект
+    basic-node:
+        container_name: web-node
+        build: 
+            context: .
+        restart: unless-stopped
+        ports:
+            - '80:3000'
+        networks:
+            - basic_network
+        volumes:
+            - ./app:/var/www/appNode
+# Внутреняя сеть контейнеров   
+networks:
+    basic_network:
+        external: true

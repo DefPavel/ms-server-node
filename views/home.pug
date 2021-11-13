@@ -1,0 +1,106 @@
+extends ./layouts/layout-sidebar
+
+block content
+  .container-fluid.flex-grow-1.container-p-y
+    h4.d-flex.justify-content-between.align-items-center.py-2.mb-4
+      .font-weight-bold=title
+        .text-muted.text-tiny.mt-1
+          small.font-weight-normal Сегодня, #{to_day}
+      button.btn.btn-primary(type='button') Заселение &nbsp; 
+        i.sidenav-icon.ion.ion-md-add  
+    .row 
+      .col-sm
+        .card.mb-4
+          .card-body 
+            .d-flex.align-items-center
+              .lnr.lnr-home.display-4.text-danger
+              .ml-3 
+                .d-flex.flex-column
+                  p.m-2.font-weight-bold Общежитие №2
+                  .ml-2.text-success Зашло: #{countPersInVisit2} 
+                  .ml-2.text-warning Вышло: #{countPersOutVisit2}
+      .col-sm
+        .card.mb-4
+          .card-body 
+            .d-flex.align-items-center
+              .lnr.lnr-home.display-4.text-danger
+              .ml-3 
+                .d-flex.flex-column
+                  p.m-2.font-weight-bold Общежитие №3
+                  .ml-2.text-success Зашло: #{countPersInVisit3} 
+                  .ml-2.text-warning Вышло: #{countPersOutVisit3}
+
+      .col-sm
+        .card.mb-4
+          .card-body 
+            .d-flex.align-items-center
+              .lnr.lnr-home.display-4.text-danger
+              .ml-3 
+                .d-flex.flex-column
+                  p.m-2.font-weight-bold Общежитие №4
+                  .ml-2.text-success Зашло: #{countPersInVisit4} 
+                  .ml-2.text-warning Вышло: #{countPersOutVisit4}
+      .col-sm
+        .card.mb-4
+          .card-body 
+            .d-flex.align-items-center
+              .lnr.lnr-home.display-4.text-danger
+              .ml-3 
+                .d-flex.flex-column
+                  p.m-2.font-weight-bold Общежитие №5
+                  .ml-2.text-success Зашло: #{countPersInVisit5} 
+                  .ml-2.text-warning Вышло: #{countPersOutVisit5}
+      .col-sm
+        .card.mb-4
+          .card-body 
+            .d-flex.align-items-center
+              .lnr.lnr-home.display-4.text-danger
+              .ml-3 
+                .d-flex.flex-column
+                  p.m-2.font-weight-bold Общежитие №7
+                  .ml-2.text-success Зашло: #{countPersInVisit7} 
+                  .ml-2.text-warning Вышло: #{countPersOutVisit7}
+      
+
+
+    .card.mb-4 
+      h5.card-header.with-elements.border-0.pt-3.pb-0
+        span.card-header-title
+          i.ion.ion-md-stats.text-primary 
+          | &nbsp; Статистика посещаемости
+        .card-header-elements.ml-auto
+          div(class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons")
+            label.btn.btn-default.md-btn-flat.active
+              input(type='radio', name='btn-radio' checked='true')
+              | сегодня
+            label.btn.btn-default.md-btn-flat
+              input(type='radio', name='btn-radio')
+              | 7 дней
+            label.btn.btn-default.md-btn-flat
+              input(type='radio', name='btn-radio' )
+              | месяц    
+      hr.border-light.mb-0
+      .table-responsive
+        table.table.card-table
+          thead 
+            tr 
+              th Ф.И.О
+              th Общежитие
+              th Секция
+              th Комната      
+              th Статус
+              th Время  
+
+block scripts 
+  // Sripts
+  script(type="text/javascript" src="assets/vendor/libs/popper/popper.js")
+  script(type="text/javascript" src="assets/vendor/js/bootstrap.js")
+  script(type="text/javascript" src="assets/vendor/js/sidenav.js")
+  // Libs
+  script(type="text/javascript" src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js")
+  script(type="text/javascript" src="assets/vendor/libs/chartjs/chartjs.js")
+
+  script(type="text/javascript" src="assets/js/dashboards_dashboard-5.js")
+  // Demo
+  script(type="text/javascript" src="assets/js/demo.js")
+  script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js") 
